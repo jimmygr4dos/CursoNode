@@ -13,8 +13,10 @@ export class Busquedas {
 
   get historialCapitalizado() {
     return this.historial.map( lugar => {
+
       let palabras = lugar.split(' ');
-      palabras = palabras.map(p => p[0].toUpperCase() + p.substring(1));
+      palabras = palabras.map( p => p[0].toUpperCase() + p.substring(1) );
+      
       return palabras.join(' ');
     });
   }
