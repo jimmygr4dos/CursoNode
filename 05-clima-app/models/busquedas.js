@@ -94,6 +94,9 @@ export class Busquedas {
       return;
     }
 
+    //Mantener 6 lugares en el Historial
+    this.historial = this.historial.splice(0, 5);
+
     this.historial.unshift(lugar);
 
     //Grabar en BD
